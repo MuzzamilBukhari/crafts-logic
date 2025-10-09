@@ -77,7 +77,7 @@ const TestimonialsPreview = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.id}
               className="bg-white dark:bg-gray-700 p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 relative"

@@ -5,10 +5,8 @@ import { useState } from 'react';
 import { 
   Calendar, 
   Clock, 
-  User, 
   ArrowRight, 
   Search,
-  Tag,
   BookOpen,
   TrendingUp
 } from 'lucide-react';
@@ -331,7 +329,7 @@ const BlogPage = () => {
                 </h2>
                 {searchTerm && (
                   <p className="text-lg text-gray-600 dark:text-gray-300">
-                    Found {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} matching "{searchTerm}"
+                    Found {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} matching &quot;{searchTerm}&quot;
                   </p>
                 )}
               </motion.div>

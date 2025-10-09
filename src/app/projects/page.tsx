@@ -8,7 +8,6 @@ import {
   Eye, 
   Calendar,
   X,
-  ArrowLeft,
   ArrowRight
 } from 'lucide-react';
 
@@ -478,7 +477,7 @@ const ProjectsPage = () => {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Let's create something amazing together. Get in touch and let's discuss your vision.
+              Let&apos;s create something amazing together. Get in touch and let&apos;s discuss your vision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

@@ -136,7 +136,7 @@ const ContactPage = () => {
               Get in <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Touch</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Ready to start your project? Let's discuss how we can help bring your vision to life 
+              Ready to start your project? Let&apos;s discuss how we can help bring your vision to life 
               with our comprehensive digital solutions.
             </p>
             <div className="flex items-center justify-center space-x-2 text-purple-600 dark:text-purple-400">
@@ -276,7 +276,7 @@ const ContactPage = () => {
                       className="flex items-center space-x-2 text-green-600 bg-green-50 dark:bg-green-900/30 p-4 rounded-xl"
                     >
                       <CheckCircle className="w-5 h-5" />
-                      <span>Message sent successfully! We'll get back to you soon.</span>
+                      <span>Message sent successfully! We&apos;ll get back to you soon.</span>
                     </motion.div>
                   )}
 
@@ -328,7 +328,7 @@ const ContactPage = () => {
                   Contact Information
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                  We're here to help you bring your digital vision to life. Reach out through any of these channels.
+                  We&apos;re here to help you bring your digital vision to life. Reach out through any of these channels.
                 </p>
               </div>
 

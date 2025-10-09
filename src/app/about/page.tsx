@@ -6,7 +6,6 @@ import {
   Heart, 
   Zap, 
   Shield, 
-  Users, 
   Award,
   Github,
   Linkedin,
@@ -317,7 +316,7 @@ const AboutPage = () => {
                     {member.role}
                   </p>
                   <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-4">
-                    "{member.tagline}"
+                    &quot;{member.tagline}&quot;
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">
                     {member.description}
@@ -408,7 +407,7 @@ const AboutPage = () => {
               Ready to Work Together?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Let's create something amazing together. Get in touch and let's discuss your next project.
+              Let&apos;s create something amazing together. Get in touch and let&apos;s discuss your next project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
