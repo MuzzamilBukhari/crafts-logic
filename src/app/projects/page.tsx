@@ -46,7 +46,7 @@ const ProjectsPage = () => {
       description: 'Comprehensive healthcare management system with patient portal, appointment scheduling, and telemedicine features.',
       shortDescription: 'HIPAA-compliant healthcare management platform',
       image: '/api/placeholder/600/400',
-      date: '2024',
+      date: '2025',
       technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'WebRTC', 'AWS'],
       features: [
         'Patient portal and records',
@@ -177,9 +177,10 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
+      <section className="relative py-20 bg-[linear-gradient(120deg,#0a192f,#112240,#1e3a8a,#172554,#1e40af)]
+  bg-[length:400%_400%] animate-[gradientFlow_15s_ease_infinite]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -187,14 +188,14 @@ const ProjectsPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Projects</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="bg-white bg-clip-text text-transparent">Projects</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               Explore our portfolio of innovative digital solutions that have helped businesses 
               achieve their goals and exceed expectations.
             </p>
-            <div className="flex items-center justify-center space-x-2 text-purple-600 dark:text-purple-400">
+            <div className="flex items-center justify-center space-x-2 text-green-600 dark:text-green-400">
               <Calendar className="w-5 h-5" />
               <span className="text-sm font-medium">{projects.length} Projects Completed</span>
             </div>
@@ -203,7 +204,7 @@ const ProjectsPage = () => {
       </section>
 
       {/* Filter Categories */}
-      <section className="py-12 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <section className="py-12 bg-white dark:bg-blue-950 border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="flex flex-wrap justify-center gap-4"
@@ -217,8 +218,8 @@ const ProjectsPage = () => {
                 onClick={() => setFilter(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   filter === category.id
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    ? 'bg-green-600 text-white shadow-lg'
+                    : 'bg-gray-100 dark:bg-blue-900 text-gray-600 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-green-900/30'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -250,7 +251,7 @@ const ProjectsPage = () => {
                   layout
                 >
                   {/* Project Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-purple-400 to-blue-500 overflow-hidden">
+                  <div className="relative h-48 bg-gradient-to-br from-gray-400 to-gray-500 overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-6xl font-bold text-white/20">
                         {project.id}
@@ -321,7 +322,7 @@ const ProjectsPage = () => {
                     {/* Action Button */}
                     <motion.button
                       onClick={() => setSelectedProject(project.id)}
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="w-full bg-gradient-to-r from-gray-600 to-gray-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
@@ -360,7 +361,7 @@ const ProjectsPage = () => {
                 return (
                   <div>
                     {/* Modal Header */}
-                    <div className="relative h-64 bg-gradient-to-br from-purple-400 to-blue-500 rounded-t-3xl">
+                    <div className="relative h-64 bg-gradient-to-br from-gray-400 to-gray-500 rounded-t-3xl">
                       <button
                         onClick={() => setSelectedProject(null)}
                         className="absolute top-6 right-6 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -410,7 +411,7 @@ const ProjectsPage = () => {
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             {project.features.map((feature, index) => (
                               <div key={index} className="flex items-center space-x-3">
-                                <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                                 <span className="text-gray-600 dark:text-gray-300">{feature}</span>
                               </div>
                             ))}
@@ -424,7 +425,7 @@ const ProjectsPage = () => {
                             {project.technologies.map((tech) => (
                               <span
                                 key={tech}
-                                className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full font-medium"
+                                className="px-4 py-2 bg-purple-100 dark:bg-blue-950 text-white dark:text-white rounded-full font-medium"
                               >
                                 {tech}
                               </span>
@@ -438,7 +439,7 @@ const ProjectsPage = () => {
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-semibold text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                            className="flex-1 bg-gradient-to-r from-blue-950 to-blue-900 text-white py-4 rounded-xl font-semibold text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
                           >
                             <ExternalLink className="w-5 h-5" />
                             <span>View Live Site</span>
@@ -464,7 +465,7 @@ const ProjectsPage = () => {
       </AnimatePresence>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"
@@ -473,15 +474,15 @@ const ProjectsPage = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-950 mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-gray-609 mb-8">
               Let&apos;s create something amazing together. Get in touch and let&apos;s discuss your vision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-gradient-to-r from-blue-950 to-blue-900 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -489,7 +490,7 @@ const ProjectsPage = () => {
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               <motion.button
-                className="bg-white dark:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-gray-200 dark:border-gray-600 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300"
+                className="bg-white dark:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-gray-200 dark:border-gray-600 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

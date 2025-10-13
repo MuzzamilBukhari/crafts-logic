@@ -8,6 +8,16 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+        keyframes: {
+        gradientShift: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      animation: {
+        gradientShift: 'gradientShift 10s ease infinite',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
@@ -106,3 +116,4 @@ module.exports = {
   },
   plugins: [],
 }
+

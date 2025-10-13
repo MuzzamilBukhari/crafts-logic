@@ -18,11 +18,11 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'The Future of AI in Web Development: Trends for 2024',
+      title: 'The Future of AI in Web Development: Trends for 2026',
       excerpt: 'Explore how artificial intelligence is revolutionizing web development, from automated code generation to intelligent user experiences.',
       content: 'Artificial intelligence is transforming the landscape of web development...',
       image: '/api/placeholder/600/400',
-      author: 'Muzzamil Bukhari',
+      author: 'Huzaifa Naeem',
       date: '2024-01-15',
       readTime: '8 min read',
       category: 'AI Development',
@@ -35,7 +35,7 @@ const BlogPage = () => {
       excerpt: 'Learn how to create high-performance e-commerce applications using Next.js, featuring server-side rendering and optimal user experience.',
       content: 'Next.js has become the go-to framework for building modern e-commerce solutions...',
       image: '/api/placeholder/600/400',
-      author: 'Alex Thompson',
+      author: 'Hijaabi Girl',
       date: '2024-01-10',
       readTime: '12 min read',
       category: 'Web Development',
@@ -48,7 +48,7 @@ const BlogPage = () => {
       excerpt: 'Discover the essential design principles that can significantly improve your website\'s conversion rates and user satisfaction.',
       content: 'Great design is more than just aesthetics; it\'s about creating experiences...',
       image: '/api/placeholder/600/400',
-      author: 'Sarah Wilson',
+      author: 'Hijaabi Girl',
       date: '2024-01-08',
       readTime: '6 min read',
       category: 'Design',
@@ -61,7 +61,7 @@ const BlogPage = () => {
       excerpt: 'A comprehensive comparison to help you decide between Shopify and custom e-commerce solutions for your business needs.',
       content: 'Choosing the right e-commerce platform is crucial for your business success...',
       image: '/api/placeholder/600/400',
-      author: 'Alex Thompson',
+      author: 'Huzaifa Naeem',
       date: '2024-01-05',
       readTime: '10 min read',
       category: 'E-commerce',
@@ -125,9 +125,10 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
+      <section className="relative py-20 bg-[linear-gradient(120deg,#0a192f,#112240,#1e3a8a,#172554,#1e40af)]
+  bg-[length:400%_400%] animate-[gradientFlow_15s_ease_infinite]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -135,13 +136,13 @@ const BlogPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Blog</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-white bg-clip-text">Blog</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               Insights, tutorials, and thoughts on web development, AI, design, and the future of digital innovation.
             </p>
-            <div className="flex items-center justify-center space-x-2 text-purple-600 dark:text-purple-400">
+            <div className="flex items-center justify-center space-x-2 text-green-600 dark:text-green-400">
               <BookOpen className="w-5 h-5" />
               <span className="text-sm font-medium">{blogPosts.length} Articles & Growing</span>
             </div>
@@ -150,7 +151,7 @@ const BlogPage = () => {
       </section>
 
       {/* Search & Filter */}
-      <section className="py-12 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <section className="py-12 bg-gray-100 border-b border-gray-200 dark:border-blue-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Search Bar */}
@@ -166,7 +167,7 @@ const BlogPage = () => {
                 placeholder="Search articles, topics, or tags..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white text-lg"
+                className="w-full pl-12 pr-4 py-4 bg-gray-50 dark:bg-blue-950 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white text-lg"
               />
             </motion.div>
 
@@ -183,8 +184,8 @@ const BlogPage = () => {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-purple-600 text-white shadow-lg'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                      ? 'bg-green-600 text-white shadow-lg'
+                      : 'bg-gray-100 dark:bg-blue-950 text-gray-600 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-green-600'
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -208,10 +209,10 @@ const BlogPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Featured <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Articles</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-blue-950 mb-6">
+                Featured <span className="bg-blue-950 bg-clip-text text-transparent">Articles</span>
               </h2>
-              <div className="flex items-center justify-center space-x-2 text-purple-600 dark:text-purple-400">
+              <div className="flex items-center justify-center space-x-2 text-green-600 dark:text-green-400">
                 <TrendingUp className="w-5 h-5" />
                 <span className="text-sm font-medium">Most Popular & Latest</span>
               </div>
@@ -221,7 +222,7 @@ const BlogPage = () => {
               {featuredPosts.map((post, index) => (
                 <motion.article
                   key={post.id}
-                  className="group bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+                  className="group bg-white dark:bg-blue-950 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -229,12 +230,12 @@ const BlogPage = () => {
                   whileHover={{ y: -10 }}
                 >
                   {/* Featured Badge */}
-                  <div className="absolute top-4 left-4 z-10 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="absolute top-4 left-4 z-10 bg-blue-950 text-white px-3 py-1 rounded-full text-xs font-medium">
                     Featured
                   </div>
 
                   {/* Image */}
-                  <div className="relative h-64 bg-gradient-to-br from-purple-400 to-blue-500 overflow-hidden">
+                  <div className="relative h-64 bg-gradient-to-br from-gray-400 to-gray-500 overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-8xl font-bold text-white/20">
                         {post.id}
@@ -246,7 +247,7 @@ const BlogPage = () => {
                   {/* Content */}
                   <div className="p-8">
                     <div className="flex items-center space-x-4 mb-4">
-                      <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium">
+                      <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium">
                         {post.category}
                       </span>
                       <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
@@ -255,7 +256,7 @@ const BlogPage = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-300">
                       {post.title}
                     </h3>
 
@@ -265,7 +266,7 @@ const BlogPage = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center">
+                        <div className="w-10 h-10 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full flex items-center justify-center">
                           <span className="text-white font-semibold text-sm">
                             {post.author.split(' ').map(n => n[0]).join('')}
                           </span>
@@ -282,7 +283,7 @@ const BlogPage = () => {
                       </div>
 
                       <motion.button
-                        className="bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full transition-colors duration-300"
+                        className="bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-300"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -298,7 +299,7 @@ const BlogPage = () => {
       )}
 
       {/* All Posts */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-blue-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {filteredPosts.length === 0 ? (
             <motion.div
@@ -307,8 +308,8 @@ const BlogPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-6xl mb-4">📝</div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <div className="text-6xl mb-4"></div>
+              <h3 className="text-2xl font-bold text-blue-950 dark:text-white mb-2">
                 No articles found
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -346,7 +347,7 @@ const BlogPage = () => {
                     whileHover={{ y: -5 }}
                   >
                     {/* Image */}
-                    <div className="relative h-48 bg-gradient-to-br from-purple-400 to-blue-500 overflow-hidden">
+                    <div className="relative h-48 bg-gradient-to-br from-gray-400 to-gray-500 overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-6xl font-bold text-white/20">
                           {post.id}
@@ -357,7 +358,7 @@ const BlogPage = () => {
                     {/* Content */}
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs rounded-full font-medium">
+                        <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full font-medium">
                           {post.category}
                         </span>
                         <div className="flex items-center text-gray-500 dark:text-gray-400 text-xs">
@@ -366,7 +367,7 @@ const BlogPage = () => {
                         </div>
                       </div>
 
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 line-clamp-2">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-300 line-clamp-2">
                         {post.title}
                       </h3>
 
@@ -394,7 +395,7 @@ const BlogPage = () => {
                       {/* Author & Read More */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-gradient-to-r from-gray-500 to-gray-400 rounded-full flex items-center justify-center">
                             <span className="text-white font-semibold text-xs">
                               {post.author.split(' ').map(n => n[0]).join('')}
                             </span>
@@ -411,7 +412,7 @@ const BlogPage = () => {
                         </div>
 
                         <motion.button
-                          className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300"
+                          className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                         >
@@ -431,7 +432,7 @@ const BlogPage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="max-w-4xl mx-auto text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-12 text-white"
+            className="max-w-4xl mx-auto text-center bg-blue-950 rounded-3xl p-12 text-white"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -447,10 +448,10 @@ const BlogPage = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-xl text-gray-900 focus:ring-2 focus:ring-white focus:outline-none"
+                className="flex-1 px-6 py-4 rounded-xl text-gray-100 focus:ring-2 focus:ring-white focus:outline-none"
               />
               <motion.button
-                className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300"
+                className="bg-white text-blue-950 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

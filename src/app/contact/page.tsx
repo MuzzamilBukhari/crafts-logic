@@ -122,9 +122,10 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
+      <section className="relative py-20 bg-[linear-gradient(120deg,#0a192f,#112240,#1e3a8a,#172554,#1e40af)]
+  bg-[length:400%_400%] animate-[gradientFlow_15s_ease_infinite]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -132,14 +133,14 @@ const ContactPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Get in <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Touch</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Get in <span className="bg-white bg-clip-text text-transparent">Touch</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600  mb-8 leading-relaxed">
               Ready to start your project? Let&apos;s discuss how we can help bring your vision to life 
               with our comprehensive digital solutions.
             </p>
-            <div className="flex items-center justify-center space-x-2 text-purple-600 dark:text-purple-400">
+            <div className="flex items-center justify-center space-x-2 text-green-600 dark:text-green-400">
               <MessageSquare className="w-5 h-5" />
               <span className="text-sm font-medium">We respond within 24 hours</span>
             </div>
@@ -158,7 +159,7 @@ const ContactPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700">
+              <div className="bg-blue-950 p-8 rounded-3xl shadow-lg border border-blue-100 dark:border-blue-900">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                   Send us a Message
                 </h2>
@@ -176,7 +177,7 @@ const ContactPage = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                         placeholder="John Doe"
                       />
                     </div>
@@ -191,7 +192,7 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -208,7 +209,7 @@ const ContactPage = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                       placeholder="Project Inquiry"
                     />
                   </div>
@@ -223,7 +224,7 @@ const ContactPage = () => {
                         name="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                       >
                         <option value="">Select budget range</option>
                         <option value="<$5K">Less than $5,000</option>
@@ -241,7 +242,7 @@ const ContactPage = () => {
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-950 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
                       >
                         <option value="">Select timeline</option>
                         <option value="ASAP">ASAP</option>
@@ -263,7 +264,7 @@ const ContactPage = () => {
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white resize-none"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-950 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white resize-none"
                       placeholder="Tell us about your project, goals, and any specific requirements..."
                     />
                   </div>
@@ -295,7 +296,7 @@ const ContactPage = () => {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-white text-blue-950 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                     whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                   >
@@ -324,10 +325,10 @@ const ContactPage = () => {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                <h2 className="text-3xl font-bold text-blue-950 mb-6">
                   Contact Information
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   We&apos;re here to help you bring your digital vision to life. Reach out through any of these channels.
                 </p>
               </div>
@@ -339,7 +340,7 @@ const ContactPage = () => {
                   return (
                     <motion.div
                       key={info.title}
-                      className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+                      className="bg-blue-950 p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -347,8 +348,8 @@ const ContactPage = () => {
                       whileHover={{ y: -5 }}
                     >
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-purple-600" />
+                        <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900/30 rounded-xl flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-gray-500" />
                         </div>
                         <div className="flex-1">
                           <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
@@ -356,7 +357,7 @@ const ContactPage = () => {
                           </h3>
                           <a
                             href={info.link}
-                            className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
+                            className="text-gray-600 dark:text-gray-400 font-medium hover:underline"
                           >
                             {info.value}
                           </a>
@@ -383,7 +384,7 @@ const ContactPage = () => {
 
               {/* Social Links */}
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-xl font-semibold text-gray-950 mb-4">
                   Follow Us
                 </h3>
                 <div className="flex space-x-4">
@@ -395,7 +396,7 @@ const ContactPage = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`p-4 bg-gray-100 dark:bg-gray-800 rounded-xl text-gray-600 dark:text-gray-400 ${social.color} transition-all duration-300`}
+                        className={`p-4 bg-gray-50 rounded-xl text-gray-600  ${social.color} transition-all duration-300`}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -411,7 +412,7 @@ const ContactPage = () => {
       </section>
 
       {/* Map Section (Optional) */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-blue-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"
@@ -420,20 +421,20 @@ const ContactPage = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Working Globally
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Based remotely, working with clients worldwide. Distance is no barrier to creating amazing digital experiences together.
             </p>
             
             {/* Global Presence Visualization */}
-            <div className="bg-white dark:bg-gray-700 rounded-3xl p-8 shadow-lg">
+            <div className="bg-gray-100 rounded-3xl p-8 shadow-lg">
               <div className="text-6xl mb-4">🌍</div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-2xl font-bold text-blue-950 mb-2">
                 Remote-First Agency
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 Collaborating with clients across different time zones and cultures to deliver exceptional results.
               </p>
             </div>

@@ -127,11 +127,11 @@ const ServicesPage = () => {
 
   const colorClasses = {
     purple: {
-      icon: 'text-purple-600',
-      bg: 'bg-purple-100 dark:bg-purple-900/30',
-      border: 'border-purple-200 dark:border-purple-800',
-      hover: 'hover:border-purple-400 dark:hover:border-purple-600',
-      gradient: 'from-purple-600 to-purple-700'
+      icon: 'text-green-600',
+      bg: 'bg-green-100 dark:bg-green-900/30',
+      border: 'border-green-200 dark:border-green-800',
+      hover: 'hover:border-green-400 dark:hover:border-green-600',
+      gradient: 'from-green-600 to-green-700'
     },
     green: {
       icon: 'text-green-600',
@@ -141,39 +141,40 @@ const ServicesPage = () => {
       gradient: 'from-green-600 to-green-700'
     },
     blue: {
-      icon: 'text-blue-600',
-      bg: 'bg-blue-100 dark:bg-blue-900/30',
-      border: 'border-blue-200 dark:border-blue-800',
-      hover: 'hover:border-blue-400 dark:hover:border-blue-600',
-      gradient: 'from-blue-600 to-blue-700'
+      icon: 'text-green-600',
+      bg: 'bg-green-100 dark:bg-green-900/30',
+      border: 'border-blue-200 dark:border-green-800',
+      hover: 'hover:border-green-400 dark:hover:border-green-600',
+      gradient: 'from-green-600 to-green-700'
     },
     pink: {
-      icon: 'text-pink-600',
-      bg: 'bg-pink-100 dark:bg-pink-900/30',
-      border: 'border-pink-200 dark:border-pink-800',
-      hover: 'hover:border-pink-400 dark:hover:border-pink-600',
-      gradient: 'from-pink-600 to-pink-700'
+      icon: 'text-green-600',
+      bg: 'bg-green-100 dark:bg-green-900/30',
+      border: 'border-green-200 dark:border-green-800',
+      hover: 'hover:border-green-400 dark:hover:border-green-600',
+      gradient: 'from-green-600 to-green-700'
     },
     teal: {
-      icon: 'text-teal-600',
-      bg: 'bg-teal-100 dark:bg-teal-900/30',
-      border: 'border-teal-200 dark:border-teal-800',
-      hover: 'hover:border-teal-400 dark:hover:border-teal-600',
-      gradient: 'from-teal-600 to-teal-700'
+      icon: 'text-green-600',
+      bg: 'bg-green-100 dark:bg-green-900/30',
+      border: 'border-green-200 dark:border-green-800',
+      hover: 'hover:border-green-400 dark:hover:border-green-600',
+      gradient: 'from-green-600 to-green-700'
     },
     indigo: {
-      icon: 'text-indigo-600',
-      bg: 'bg-indigo-100 dark:bg-indigo-900/30',
-      border: 'border-indigo-200 dark:border-indigo-800',
-      hover: 'hover:border-indigo-400 dark:hover:border-indigo-600',
-      gradient: 'from-indigo-600 to-indigo-700'
+      icon: 'text-green-600',
+      bg: 'bg-green-100 dark:bg-green-900/30',
+      border: 'border-green-200 dark:border-green-800',
+      hover: 'hover:border-green-400 dark:hover:border-green-600',
+      gradient: 'from-green-600 to-green-700'
     }
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
+      <section className="relative py-20 bg-[linear-gradient(120deg,#0a192f,#112240,#1e3a8a,#172554,#1e40af)]
+  bg-[length:400%_400%] animate-[gradientFlow_15s_ease_infinite]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -181,14 +182,14 @@ const ServicesPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Services</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="bg-white bg-clip-text text-transparent">Services</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               Comprehensive digital solutions that blend creativity, technology, and intelligence 
               to deliver exceptional results for your business.
             </p>
-            <div className="flex items-center justify-center space-x-2 text-purple-600 dark:text-purple-400">
+            <div className="flex items-center justify-center space-x-2 text-green-400">
               <Star className="w-5 h-5 fill-current" />
               <span className="text-sm font-medium">Trusted by 30+ clients worldwide</span>
               <Star className="w-5 h-5 fill-current" />
@@ -208,7 +209,7 @@ const ServicesPage = () => {
               return (
                 <motion.div
                   key={service.id}
-                  className={`group bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl border-2 ${colors.border} ${colors.hover} transition-all duration-300 hover:shadow-2xl dark:hover:shadow-purple-500/10`}
+                  className={`group bg-blue-950 p-6 sm:p-8 rounded-3xl border-2 ${colors.border} ${colors.hover} transition-all duration-300 hover:shadow-2xl dark:hover:shadow-purple-500/10`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -235,7 +236,7 @@ const ServicesPage = () => {
 
                   {/* Features */}
                   <div className="mb-6">
-                    <h4 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">
+                    <h4 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">
                       What&apos;s Included:
                     </h4>
                     <div className="grid grid-cols-1 gap-2">
@@ -290,7 +291,7 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <motion.div
             className="text-center max-w-3xl mx-auto"
@@ -299,15 +300,15 @@ const ServicesPage = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-950 mb-4 sm:mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
               Let&apos;s discuss how we can help bring your vision to life with our comprehensive digital solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
               <motion.button
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-gradient-to-r from-blue-950/90 to-blue-950 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -315,7 +316,7 @@ const ServicesPage = () => {
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.button>
               <motion.button
-                className="bg-white dark:bg-gray-700 text-gray-900 dark:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg border-2 border-gray-200 dark:border-gray-600 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300"
+                className="bg-blue-950  text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg  transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

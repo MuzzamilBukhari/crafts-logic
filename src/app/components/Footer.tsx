@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { 
   Github, 
@@ -50,7 +51,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-[linear-gradient(120deg,#0a192f,#112240,#1e3a8a,#172554,#1e40af)]
+  bg-[length:400%_400%] animate-[gradientFlow_15s_ease_infinite]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
@@ -60,11 +62,18 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center mb-3 sm:mb-4">
-              <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                CraftsLogic
-              </div>
-            </div>
+             <div className="flex items-center mb-3 sm:mb-4 space-x-2">
+      <div className="rounded-lg overflow-hidden flex items-center justify-center">
+        <Image
+          src="/images/Cs1.png" // yahan apna logo path lagayein (public folder me e.g. public/logo.png)
+          alt="CraftsLogic Logo"
+          width={150}
+          height={150}
+          className="object-contain"
+        />
+      </div>
+    
+    </div>
             <p className="text-gray-600 dark:text-gray-400 mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
               We build digital experiences that merge design, code, and intelligence. 
               Crafting innovative solutions for the modern web.
@@ -99,7 +108,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 text-xs sm:text-sm"
+                    className="text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 text-xs sm:text-sm"
                   >
                     {link.name}
                   </Link>
@@ -122,7 +131,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 text-xs sm:text-sm"
+                    className="text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 text-xs sm:text-sm"
                   >
                     {link.name}
                   </Link>
@@ -145,7 +154,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 text-xs sm:text-sm"
+                    className="text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300 text-xs sm:text-sm"
                   >
                     {link.name}
                   </Link>
@@ -167,7 +176,7 @@ const Footer = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1.5 sm:p-2 bg-gray-200 dark:bg-gray-800 rounded-lg text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-all duration-300"
+                      className="p-1.5 sm:p-2 bg-gray-200 rounded-lgtext-gray-400 hover:text-white dark:hover:text-white hover:bg-purple-100 dark:hover:bg-gray-900/30 transition-all duration-300"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -194,7 +203,7 @@ const Footer = () => {
           {/* Scroll to Top Button */}
           <motion.button
             onClick={scrollToTop}
-            className="mt-3 sm:mt-0 p-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition-colors duration-300"
+            className="mt-3 sm:mt-0 p-2 bg-white hover:bg-gray-200 text-blue-950 rounded-full transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Scroll to top"

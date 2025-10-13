@@ -1,15 +1,15 @@
-import HeroSection from './sections/HeroSection';
-import ServicesHighlight from './sections/ServicesHighlight';
-import TestimonialsPreview from './sections/TestimonialsPreview';
-import TeamPreview from './sections/TeamPreview';
+import HeroSection from "./sections/HeroSection";
+import ServicesHighlight from "./sections/ServicesHighlight";
+import TeamPreview from "./sections/TeamPreview";
+import TestimonialsPreview from "./sections/TestimonialsPreview";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="min-h-screen">
+    <main>
       <HeroSection />
       <ServicesHighlight />
       <TestimonialsPreview />
       <TeamPreview />
-    </div>
-  );
+    </main>
+  )
 }
