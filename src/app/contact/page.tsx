@@ -4,19 +4,15 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock,
+  
   Send,
   MessageSquare,
   CheckCircle,
   AlertCircle,
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram
+ 
 } from 'lucide-react';
+import contactInfo from '@/data/contact/contactInfo';
+import socialLinks from '@/data/contact/socialLinks';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -30,44 +26,8 @@ const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'hello@craftslogic.com',
-      link: 'mailto:hello@craftslogic.com',
-      description: 'Send us an email anytime'
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+92 XXX XXXXXXX',
-      link: 'tel:+92XXXXXXXXX',
-      description: 'Mon-Fri from 9am to 6pm'
-    },
-    {
-      icon: MapPin,
-      title: 'Location',
-      value: 'Remote & Global',
-      link: '#',
-      description: 'Working with clients worldwide'
-    },
-    {
-      icon: Clock,
-      title: 'Response Time',
-      value: '< 24 hours',
-      link: '#',
-      description: 'Average response time'
-    }
-  ];
-
-  const socialLinks = [
-    { name: 'GitHub', icon: Github, href: 'https://github.com', color: 'hover:text-gray-800' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com', color: 'hover:text-blue-600' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com', color: 'hover:text-blue-400' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com', color: 'hover:text-pink-600' }
-  ];
-
+  
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({

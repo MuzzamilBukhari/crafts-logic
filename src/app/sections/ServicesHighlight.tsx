@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Code2, ShoppingCart, Globe, Palette, Bot, Brain, ArrowRight } from "lucide-react"
+import colorClasses from "@/data/services/colorClasses"
 
 const ServicesHighlight = () => {
   const services = [
@@ -49,45 +50,6 @@ const ServicesHighlight = () => {
       href: "/services#agentic-ai",
     },
   ]
-
-  const colorClasses = {
-  purple: {
-    icon: "text-purple-600",
-    bg: "bg-purple-50/50",
-    border: "border-purple-200/40",
-    hover: "hover:border-purple-400 hover:bg-purple-100/70",
-  },
-  green: {
-    icon: "text-emerald-600",
-    bg: "bg-emerald-50/50",
-    border: "border-emerald-200/40",
-    hover: "hover:border-emerald-400 hover:bg-emerald-100/70",
-  },
-  blue: {
-    icon: "text-blue-600",
-    bg: "bg-blue-50/50",
-    border: "border-blue-200/40",
-    hover: "hover:border-blue-400 hover:bg-blue-100/70",
-  },
-  pink: {
-    icon: "text-pink-600",
-    bg: "bg-pink-50/50",
-    border: "border-pink-200/40",
-    hover: "hover:border-pink-400 hover:bg-pink-100/70",
-  },
-  teal: {
-    icon: "text-teal-600",
-    bg: "bg-teal-50/50",
-    border: "border-teal-200/40",
-    hover: "hover:border-teal-400 hover:bg-teal-100/70",
-  },
-  indigo: {
-    icon: "text-indigo-600",
-    bg: "bg-indigo-50/50",
-    border: "border-indigo-200/40",
-    hover: "hover:border-indigo-400 hover:bg-indigo-100/70",
-  },
-}
 
 
   return (

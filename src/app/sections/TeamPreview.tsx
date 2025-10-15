@@ -3,40 +3,9 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import teamMembers from "@/data/about/teamMembers"
 
 const TeamPreview = () => {
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Muzzamil Bukhari",
-      role: "Founder / Full Stack & AI Developer",
-      tagline: "Architecting intelligent solutions",
-      description:
-        "Passionate about building scalable applications and AI-powered systems that solve real-world problems with precision and efficiency.",
-      avatar: "/api/placeholder/300/300",
-      skills: ["React", "Node.js", "Python", "AI/ML", "AWS"],
-    },
-    {
-      id: 2,
-      name: "Huzaifa Naeem",
-      role: "Frontend Developer / Graphic Designer",
-      tagline: "Designing and developing seamless experiences",
-      description:
-        "Focused on crafting responsive, visually appealing, and high-performance websites using Next.js, React, and Tailwind CSS.",
-      avatar: "/api/placeholder/300/300",
-      skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Design"],
-    },
-    {
-      id: 3,
-      name: "Hijaabi Girl",
-      role: "UI/UX Designer",
-      tagline: "Turning design into experience",
-      description:
-        "Creates intuitive and user-friendly designs that combine beauty and usability for a perfect digital experience.",
-      avatar: "/api/placeholder/300/300",
-      skills: ["Figma", "Wireframing", "Prototyping", "UX Research", "Adobe XD"],
-    },
-  ]
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-gray-100 transition-colors duration-500">

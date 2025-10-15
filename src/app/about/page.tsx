@@ -1,78 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Target, Heart, Zap, Shield, Award, ArrowRight } from 'lucide-react'
+import { Award, ArrowRight } from 'lucide-react'
+import values from '@/data/about/values'
+import teamMembers from '@/data/about/teamMembers'
+import stats from '@/data/about/stats'
 
 const AboutPage = () => {
-  const values = [
-    {
-      icon: Target,
-      title: 'Innovation',
-      description:
-        'We explore new technologies and creative approaches to deliver intelligent, future-ready solutions.',
-    },
-    {
-      icon: Heart,
-      title: 'Passion',
-      description:
-        'Our work is driven by dedication and love for creating digital experiences that inspire and perform.',
-    },
-    {
-      icon: Zap,
-      title: 'Excellence',
-      description:
-        'We focus on precision, performance, and quality in every line of code and every design decision.',
-    },
-    {
-      icon: Shield,
-      title: 'Reliability',
-      description:
-        'We deliver projects you can trust — on time, on budget, and built to last.',
-    },
-  ]
-
-  const teamMembers = [
-    {
-      id: 1,
-      name: 'Muzzamil Bukhari',
-      role: 'Founder / Full Stack & AI Developer',
-      tagline: 'Architecting intelligent solutions',
-      description:
-        'Specializes in AI and full-stack web development, building scalable digital systems with efficiency and innovation.',
-      avatar: '/api/placeholder/400/400',
-      skills: ['React', 'Node.js', 'Python', 'AI/ML', 'AWS', 'Next.js', 'TypeScript'],
-      achievements: ['50+ Projects Delivered', 'AI Certification', 'Open Source Contributor'],
-    },
-    {
-      id: 2,
-      name: 'Huzaifa Naeem',
-      role: 'Frontend Developer / Graphic Designer',
-      tagline: 'Designing and developing seamless experiences',
-      description:
-        'Focused on crafting responsive, user-friendly websites using Next.js, React, and Tailwind CSS — blending design with functionality.',
-      avatar: '/api/placeholder/400/400',
-      skills: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Design', 'Figma'],
-      achievements: ['Creative Design Awards', '100+ Designs Completed', 'Governor House Student'],
-    },
-    {
-      id: 3,
-      name: 'Hijaabi Girl',
-      role: 'UI/UX Designer',
-      tagline: 'Turning design into experience',
-      description:
-        'Creates intuitive, elegant user interfaces that balance creativity with usability for maximum impact.',
-      avatar: '/api/placeholder/400/400',
-      skills: ['Figma', 'Wireframing', 'UX Research', 'Adobe XD', 'Branding'],
-      achievements: ['Design Excellence Award', 'UX Certification', 'Brand Identity Specialist'],
-    },
-  ]
-
-  const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '30+', label: 'Happy Clients' },
-    { number: '3+', label: 'Years Experience' },
-    { number: '99%', label: 'Satisfaction Rate' },
-  ]
 
   return (
     <div className="min-h-screen text-white transition-colors duration-500">
