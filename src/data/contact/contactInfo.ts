@@ -4,15 +4,15 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "hello@craftslogic.com",
-    link: "mailto:hello@craftslogic.com",
+    value: "contact.craftslogic@gmail.com",
+    link: "mailto:contact.craftslogic@gmail.com",
     description: "Send us an email anytime",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+92 XXX XXXXXXX",
-    link: "tel:+92XXXXXXXXX",
+    value: "+92 335 1848 651",
+    link: "tel:+923351848651",
     description: "Mon-Fri from 9am to 6pm",
   },
   {

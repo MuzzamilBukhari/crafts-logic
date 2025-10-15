@@ -10,7 +10,8 @@ import {
   Mail, 
   MapPin, 
   Phone,
-  ArrowUp
+  ArrowUp,
+  Facebook
 } from 'lucide-react';
 
 const Footer = () => {
@@ -40,10 +41,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, href: 'https://github.com' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
-    { name: 'Email', icon: Mail, href: 'mailto:hello@craftslogic.com' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/109463410/' },
+    { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/share/1KFhn4rmvP/' },
+    { name: 'Email', icon: Mail, href: 'mailto:contact.craftslogic@gmail.com' }
+
   ];
 
   const scrollToTop = () => {

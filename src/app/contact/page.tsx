@@ -78,7 +78,7 @@ const ContactPage = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent('Hi! I\'d like to discuss a project with CraftsLogic.');
-    window.open(`https://wa.me/92XXXXXXXXX?text=${message}`, '_blank');
+    window.open(`https://wa.me/923351848651?text=${message}`, '_blank');
   };
 
   return (

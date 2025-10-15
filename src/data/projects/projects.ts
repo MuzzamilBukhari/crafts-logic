@@ -52,7 +52,7 @@ const projects = [
       description: 'Premium Shopify store for luxury fashion brand with custom checkout flow and VIP customer features.',
       shortDescription: 'High-end Shopify store with custom features',
       image: '/api/placeholder/600/400',
-      date: '2023',
+      date: '2025',
       technologies: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'Shopify Plus', 'Klaviyo'],
       features: [
         'Custom checkout experience',
@@ -63,7 +63,7 @@ const projects = [
         'Email marketing integration'
       ],
       githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.craftslogic.com',
+      liveUrl: 'https://stepintrends.com/',
       client: 'Elegance Fashion',
       duration: '2 months',
       color: 'pink'
@@ -136,7 +136,29 @@ const projects = [
       client: 'ContentCraft Pro',
       duration: '10 weeks',
       color: 'indigo'
-    }
+    },
+    {
+  id: 7,
+  title: 'Creative Graphic Design Showcase',
+  category: 'graphicdesign',
+  description: 'A collection of professional graphic design projects including logo design, posters, social media creatives, and brand identity designs.',
+  shortDescription: 'Showcase of creative graphic design projects',
+  image: '/images/graphics/main-preview.jpg',
+  date: '2025',
+  technologies: ['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva'],
+  features: [
+    'Logo design and branding',
+    'Poster and flyer creation',
+    'Social media design templates',
+    'Business card and stationery design',
+    'Creative typography and layouts',
+    'High-quality print-ready files'
+  ],
+  client: 'Various Clients',
+  duration: 'Ongoing',
+  color: 'orange'
+}
+
   ];
 
 export default projects
