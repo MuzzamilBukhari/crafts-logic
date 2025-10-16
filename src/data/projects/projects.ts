@@ -152,8 +152,8 @@ const projects: Project[] = [
       category: 'graphicdesign',
       description: 'A collection of professional graphic design projects including logo design, posters, social media creatives, and brand identity designs.',
       shortDescription: 'Showcase of creative graphic design projects',
-      image: '/images/graphics/main-preview.jpg',
-      thumbnailUrl: '/images/graphics/main-preview.jpg',
+      image: '/api/placeholder/600/400',
+      thumbnailUrl: '/api/placeholder/600/400',
       date: '2025',
       technologies: ['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva'],
       features: [
@@ -167,8 +167,7 @@ const projects: Project[] = [
       client: 'Various Clients',
       duration: 'Ongoing',
       color: 'orange',
-      platform: 'Instagram',
-      platformUrl: 'https://instagram.com/craftslogic'
+
     }
   ];
 

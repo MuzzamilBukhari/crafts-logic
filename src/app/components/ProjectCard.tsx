@@ -184,7 +184,7 @@ const ProjectCard = ({ project, index, onViewDetails, colorClasses }: ProjectCar
           <div className="flex flex-col gap-3">
             <motion.button
               onClick={() => setLightboxOpen(true)}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
+              className="w-full bg-gradient-to-r from-gray-600 to-gray-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

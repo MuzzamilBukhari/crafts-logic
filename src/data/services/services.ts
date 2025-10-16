@@ -5,6 +5,7 @@ import {
   Palette, 
   Bot, 
   Brain,
+  ImageIcon,
 } from 'lucide-react';
 
 const services = [
@@ -115,6 +116,32 @@ const services = [
       technologies: ['Python', 'LangChain', 'OpenAI', 'Anthropic', 'Hugging Face', 'Vector Databases'],
       color: 'indigo',
       pricing: 'Starting from $5,000'
-    }
+    },
+{
+  id: 'graphic-design',
+  icon: ImageIcon, 
+  title: 'Graphic Design',
+  subtitle: 'Creative Visual Solutions',
+  description:
+    'We craft visually stunning and brand-focused designs that capture attention and communicate your message effectively. From logo design to complete brand identity, our work blends creativity with strategy to make your visuals stand out.',
+  features: [
+    'Logo & Brand Identity Design',
+    'Business Cards & Stationery',
+    'Social Media Post Design',
+    'Flyers, Banners & Posters',
+    'Product Packaging Design',
+    'Custom Illustrations & Digital Art'
+  ],
+  technologies: [
+    'Adobe Photoshop',
+    'Adobe Illustrator',
+    'Canva',
+    'Figma',
+    'CorelDRAW'
+  ],
+  color: 'pink',
+  pricing: 'Starting from $50'
+}
+
   ];
   export default services
