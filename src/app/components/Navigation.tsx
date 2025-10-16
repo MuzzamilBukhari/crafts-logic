@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { 
-  Menu, 
-  X, 
-  Home, 
-  User, 
-  Briefcase, 
-  FileText, 
-  Phone, 
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import {
+  Menu,
+  X,
+  Home,
+  User,
+  Briefcase,
+  FileText,
+  Phone,
   FolderOpen,
   Shield,
-  FileCheck
-} from 'lucide-react';
+  FileCheck,
+} from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,17 +23,12 @@ const Navigation = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: User },
-    { name: 'Services', href: '/services', icon: Briefcase },
-    { name: 'Projects', href: '/projects', icon: FolderOpen },
-    { name: 'Blog', href: '/blog', icon: FileText },
-    { name: 'Contact', href: '/contact', icon: Phone },
-  ];
-
-  const legalItems = [
-    { name: 'Privacy Policy', href: '/privacy-policy', icon: Shield },
-    { name: 'Terms of Service', href: '/terms-of-service', icon: FileCheck },
+    { name: "Home", href: "/", icon: Home },
+    { name: "About", href: "/about", icon: User },
+    { name: "Services", href: "/services", icon: Briefcase },
+    { name: "Projects", href: "/projects", icon: FolderOpen },
+    { name: "Blog", href: "/blog", icon: FileText },
+    { name: "Contact", href: "/contact", icon: Phone },
   ];
 
   useEffect(() => {
@@ -41,8 +36,8 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -51,8 +46,8 @@ const Navigation = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-200/60'
-          : 'bg-white/70 backdrop-blur-md'
+          ? "bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-200/60"
+          : "bg-white/70 backdrop-blur-md"
       }`}
     >
       <nav className="container mx-auto px-6">
@@ -81,33 +76,12 @@ const Navigation = () => {
                   href={item.href}
                   className={`flex items-center space-x-1 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     pathname === item.href
-                      ? 'text-blue-950 bg-blue-50/80'
-                      : 'text-gray-600 hover:text-blue-950 hover:bg-gray-50/80'
+                      ? "text-blue-950 bg-blue-50/80"
+                      : "text-gray-600 hover:text-blue-950 hover:bg-gray-50/80"
                   }`}
                 >
                   <Icon className="w-4 h-4" />
                   <span>{item.name}</span>
-                </Link>
-              );
-            })}
-
-            {/* Legal Items with Separator */}
-            <div className="h-6 w-px bg-gray-300 mx-2"></div>
-            
-            {legalItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    pathname === item.href
-                      ? 'text-blue-950 bg-blue-50/80'
-                      : 'text-gray-500 hover:text-blue-950 hover:bg-gray-50/80'
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  <span className="text-sm">{item.name}</span>
                 </Link>
               );
             })}
@@ -117,9 +91,9 @@ const Navigation = () => {
           <button
             onClick={toggleMenu}
             className={`md:hidden p-2 rounded-lg transition-all duration-200 ${
-              isOpen 
-                ? 'text-blue-950 bg-blue-50' 
-                : 'text-gray-600 hover:text-blue-950 hover:bg-gray-50'
+              isOpen
+                ? "text-blue-950 bg-blue-50"
+                : "text-gray-600 hover:text-blue-950 hover:bg-gray-50"
             }`}
             aria-label="Toggle menu"
           >
@@ -141,36 +115,8 @@ const Navigation = () => {
                       href={item.href}
                       className={`flex items-center space-x-3 px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
                         pathname === item.href
-                          ? 'text-blue-950 bg-blue-50/80'
-                          : 'text-gray-600 hover:text-blue-950 hover:bg-blue-50/80'
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <Icon className="w-5 h-5" />
-                      <span>{item.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-
-              {/* Separator */}
-              <div className="h-px bg-gray-200 my-4"></div>
-
-              {/* Legal Items */}
-              <div className="space-y-2">
-                <p className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  Legal
-                </p>
-                {legalItems.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={`flex items-center space-x-3 px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
-                        pathname === item.href
-                          ? 'text-blue-950 bg-blue-50/80'
-                          : 'text-gray-600 hover:text-blue-950 hover:bg-blue-50/80'
+                          ? "text-blue-950 bg-blue-50/80"
+                          : "text-gray-600 hover:text-blue-950 hover:bg-blue-50/80"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >

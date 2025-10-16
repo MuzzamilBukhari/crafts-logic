@@ -7,28 +7,21 @@ import {
   Github, 
   Calendar,
   X,
-  ArrowRight
+  ArrowRight,
+  Palette,
+  Code
 } from 'lucide-react';
 import projects from '@/data/projects/projects'
 import categories from '@/data/projects/categories';
 import ProjectCard from '@/app/components/ProjectCard';
 import GraphicsSection from '@/app/components/GraphicsSection';
+import colorClasses from '@/data/projects/colorClasses';
 
 const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [filter, setFilter] = useState('all');
   
   const filteredProjects = filter === 'all' ? projects : projects.filter(project => project.category === filter);
-
-  const colorClasses = {
-    purple: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600',
-    blue: 'bg-blue-100 dark:bg-blue-900/30 text-blue-600',
-    pink: 'bg-pink-100 dark:bg-pink-900/30 text-pink-600',
-    green: 'bg-green-100 dark:bg-green-900/30 text-green-600',
-    teal: 'bg-teal-100 dark:bg-teal-900/30 text-teal-600',
-    indigo: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600',
-    orange: 'bg-orange-100 dark:bg-orange-900/30 text-orange-600'
-  };
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -58,7 +51,7 @@ const ProjectsPage = () => {
       </section>
 
       {/* Filter Categories */}
-      <section className="py-12 bg-white dark:bg-blue-950 border-b border-gray-200 dark:border-gray-800">
+      {/* <section className="py-12 bg-white dark:bg-blue-950 border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="flex flex-wrap justify-center gap-4"
@@ -83,10 +76,41 @@ const ProjectsPage = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
+      {/* Section Header */}
+      <div className='mt-8'>
+              <motion.div
+                className="text-center max-w-3xl mx-auto mb-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <motion.div
+                  className="inline-flex items-center justify-center space-x-2 mb-6"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-blue-950 p-3 rounded-2xl">
+                    <Code className="w-6 h-6 text-gray-100" />
+                  </div>
+                </motion.div>
+      
+                <h2 className="text-4xl md:text-5xl font-bold text-blue-950 mb-4">
+                  Development <span className="bg-blue-950 bg-clip-text text-transparent">Projects</span>
+                </h2>
+                
+                <p className="text-lg text-gray-600 leading-relaxed">
+                 Explore our range of powerful development projects, from dynamic web applications to seamless automation tools.
+Each build reflects our focus on performance, scalability, and real-world impact.
+                </p>
+              </motion.div>
+              </div>
 
       {/* Projects Grid */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

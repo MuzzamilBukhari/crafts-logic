@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import services from '@/data/services/services';
 import colorClasses from '@/data/services/colorClasses';
 import { Star, CheckCircle, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const ServicesPage = () => {
   return (
@@ -150,7 +151,7 @@ const ServicesPage = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <span>
-                  <a href="/contact">Get Free Consultation</a></span>
+                  <Link href="/contact">Get Free Consultation</Link></span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.button>
               <motion.button
@@ -158,8 +159,8 @@ const ServicesPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <a href="/projects">
-                View Our Work</a>
+                <Link href="/projects">
+                View Our Work</Link>
               </motion.button>
             </div>
           </motion.div>

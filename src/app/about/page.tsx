@@ -6,6 +6,7 @@ import Image from 'next/image'
 import values from '@/data/about/values'
 import teamMembers from '@/data/about/teamMembers'
 import stats from '@/data/about/stats'
+import Link from 'next/link'
 
 const AboutPage = () => {
 
@@ -54,7 +55,7 @@ const AboutPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Start Your Project</span>
+              <Link href={'/contact'}>Start Your Project</Link>
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </motion.div>
