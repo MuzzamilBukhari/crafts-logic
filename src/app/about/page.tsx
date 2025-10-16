@@ -231,7 +231,9 @@ const AboutPage = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
+          <a href="/contact">
           <span>Start Your Project</span>
+          </a>
           <ArrowRight className="w-5 h-5" />
         </motion.button>
       </section>

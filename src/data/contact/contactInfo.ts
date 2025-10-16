@@ -4,8 +4,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "contact.craftslogic@gmail.com",
-    link: "mailto:contact.craftslogic@gmail.com",
+    value: "support@craftslogic.com",
+    link: "mailto:support@craftslogic.com",
     description: "Send us an email anytime",
   },
   {

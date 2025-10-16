@@ -4,9 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { 
-  Github, 
   Linkedin, 
-  Instagram, 
   Mail, 
   MapPin, 
   Phone,
@@ -22,7 +20,6 @@ const Footer = () => {
       { name: 'About Us', href: '/about' },
       { name: 'Services', href: '/services' },
       { name: 'Projects', href: '/projects' },
-      { name: 'Team', href: '/team' },
     ],
     services: [
       { name: 'Full Stack Development', href: '/services#fullstack' },
@@ -31,12 +28,13 @@ const Footer = () => {
       { name: 'UI/UX Design', href: '/services#uiux' },
       { name: 'AI Automation', href: '/services#ai-automation' },
       { name: 'Agentic AI Solutions', href: '/services#agentic-ai' },
+      { name: 'Graphic Design', href: '/services#graphic-design' },
     ],
     resources: [
       { name: 'Blog', href: '/blog' },
       { name: 'Contact', href: '/contact' },
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Terms of Service', href: '/terms-of-service' },
     ],
   };
 
@@ -90,7 +88,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />
-                <span>contact.crafslogic@gmail.com</span>
+                <span>support@craftslogic.com</span>
               </div>
             </div>
           </motion.div>

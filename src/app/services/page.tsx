@@ -115,7 +115,8 @@ const ServicesPage = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <span>Get Quote</span>
+                      <span>
+                        <a href="/contact">Get Quote</a></span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
                   </div>
@@ -148,7 +149,8 @@ const ServicesPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span>Get Free Consultation</span>
+                <span>
+                  <a href="/contact">Get Free Consultation</a></span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.button>
               <motion.button
@@ -156,7 +158,8 @@ const ServicesPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View Our Work
+                <a href="/projects">
+                View Our Work</a>
               </motion.button>
             </div>
           </motion.div>

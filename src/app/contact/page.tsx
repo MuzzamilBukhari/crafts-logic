@@ -37,44 +37,50 @@ const ContactPage = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitStatus(null);
 
-    try {
-      // Replace with your EmailJS service ID, template ID, and public key
-      const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your service ID
-        'YOUR_TEMPLATE_ID', // Replace with your template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          budget: formData.budget,
-          timeline: formData.timeline,
-        },
-        'YOUR_PUBLIC_KEY' // Replace with your public key
-      );
+  try {
+    const result = await emailjs.send(
+      'service_59y1o89', // ✅ your service ID
+      'template_1o1ia2i', // ✅ your template ID
+      {
+    name: formData.name,
+    email: formData.email,
+    subject: formData.subject,
+    message: formData.message,
+    budget: formData.budget,
+    timeline: formData.timeline,
+    time: new Date().toLocaleString(), // For {{time}}
+  },
+      'mBvLKjIPbvne7jbtx' // ✅ your public key
+    );
 
-      if (result.status === 200) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-          budget: '',
-          timeline: ''
-        });
-      }
-    } catch (error) {
-      console.error('Email send error:', error);
+    console.log('EmailJS result:', result); // 👀 check what’s returned
+
+    // ✅ EmailJS returns text === 'OK' when success
+    if (result.text === 'OK') {
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        budget: '',
+        timeline: ''
+      });
+    } else {
       setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  } catch (error) {
+    console.error('Email send error:', error);
+    setSubmitStatus('error');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const openWhatsApp = () => {
     const message = encodeURIComponent('Hi! I\'d like to discuss a project with CraftsLogic.');

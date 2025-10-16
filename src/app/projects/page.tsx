@@ -263,16 +263,24 @@ const ProjectsPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span>Start Your Project</span>
+                <span>
+                <a href="/contact">
+                Start Your Project
+                </a>
+                </span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-              <motion.button
+              {/* <motion.button
                 className="bg-white dark:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-gray-200 dark:border-gray-600 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                <span>
+                <a href="/contact">
                 Get Free Quote
-              </motion.button>
+                </a>
+                </span>
+              </motion.button> */}
             </div>
           </motion.div>
         </div>

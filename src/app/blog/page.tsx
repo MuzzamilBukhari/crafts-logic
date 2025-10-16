@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import blogPosts from '@/data/blog/blogPosts';
 import categories from '@/data/blog/categories';
+import NewSeletter from '../components/NewSeletter';
 
 const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -341,7 +342,7 @@ const BlogPage = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto text-center bg-blue-950 rounded-3xl p-12 text-white"
@@ -372,7 +373,8 @@ const BlogPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+      <NewSeletter />
     </div>
   );
 };
