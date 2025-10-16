@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/tab.ico",
+    icon: "/favicon.ico",
 
   },
 };
