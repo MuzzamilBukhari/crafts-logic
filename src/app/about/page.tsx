@@ -179,7 +179,7 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -8 }}
               >
-                <div className="relative overflow-hidden bg-gray-700 h-48 sm:h-56 lg:h-64 rounded-lg">
+                <div className="relative overflow-hidden bg-gray-700 h-64 sm:h-72 lg:h-80 rounded-lg">
                   <Image
                     src={member.avatar}
                     alt={member.name}
