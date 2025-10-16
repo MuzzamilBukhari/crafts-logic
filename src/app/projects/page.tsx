@@ -12,6 +12,7 @@ import {
 import projects from '@/data/projects/projects'
 import categories from '@/data/projects/categories';
 import ProjectCard from '@/app/components/ProjectCard';
+import GraphicsSection from '@/app/components/GraphicsSection';
 
 const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -105,6 +106,9 @@ const ProjectsPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Graphics Projects Section */}
+      <GraphicsSection />
 
       {/* Project Modal */}
       <AnimatePresence>
