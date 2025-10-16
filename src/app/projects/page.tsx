@@ -78,7 +78,7 @@ const ProjectsPage = () => {
         </div>
       </section> */}
       {/* Section Header */}
-      <div className='mt-8'>
+      <div className='mt-8 px-8'>
               <motion.div
                 className="text-center max-w-3xl mx-auto mb-16"
                 initial={{ opacity: 0, y: 30 }}
