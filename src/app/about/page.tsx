@@ -1,15 +1,14 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Award, ArrowRight } from 'lucide-react'
-import Image from 'next/image'
-import values from '@/data/about/values'
-import teamMembers from '@/data/about/teamMembers'
-import stats from '@/data/about/stats'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import { Award, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import values from "@/data/about/values";
+import teamMembers from "@/data/about/teamMembers";
+import stats from "@/data/about/stats";
+import Link from "next/link";
 
 const AboutPage = () => {
-
   return (
     <div className="min-h-screen text-white transition-colors duration-500">
       {/* Hero Section */}
@@ -24,8 +23,9 @@ const AboutPage = () => {
             About <span className="text-white">CraftsLogic</span>
           </motion.h1>
           <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-            We are a passionate team of developers and designers dedicated to crafting intelligent,
-            aesthetic, and high-performing digital experiences.
+            We are a passionate team of developers and designers dedicated to
+            crafting intelligent, aesthetic, and high-performing digital
+            experiences.
           </p>
         </div>
       </section>
@@ -43,19 +43,20 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-              At CraftsLogic, we believe in technology’s ability to transform businesses and lives.
-              Our mission is to build solutions that merge innovation with usability.
+              At CraftsLogic, we believe in technology’s ability to transform
+              businesses and lives. Our mission is to build solutions that merge
+              innovation with usability.
             </p>
             <p className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
-              Combining AI, modern design, and robust development, we deliver experiences that are as
-              powerful as they are beautiful.
+              Combining AI, modern design, and robust development, we deliver
+              experiences that are as powerful as they are beautiful.
             </p>
             <motion.button
               className="bg-blue-950 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg shadow-md hover:shadow-xl transition-all duration-300 flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href={'/contact'}>Start Your Project</Link>
+              <Link href={"/contact"}>Start Your Project</Link>
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </motion.div>
@@ -67,7 +68,9 @@ const AboutPage = () => {
             viewport={{ once: true }}
           >
             <div className="dark:bg-blue-950 p-6 sm:p-8 rounded-3xl text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">Why Choose CraftsLogic?</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
+                Why Choose CraftsLogic?
+              </h3>
               <ul className="space-y-3 text-gray-700 dark:text-gray-300 text-sm sm:text-base">
                 <li>✅ Innovative and AI-powered solutions</li>
                 <li>✅ Responsive and modern designs</li>
@@ -91,12 +94,13 @@ const AboutPage = () => {
             Our Values
           </motion.h2>
           <p className="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            These principles define who we are and how we approach every project.
+            These principles define who we are and how we approach every
+            project.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, i) => {
-              const Icon = value.icon
+              const Icon = value.icon;
               return (
                 <motion.div
                   key={value.title}
@@ -117,7 +121,7 @@ const AboutPage = () => {
                     {value.description}
                   </p>
                 </motion.div>
-              )
+              );
             })}
           </div>
         </div>
@@ -137,7 +141,9 @@ const AboutPage = () => {
               <div className="text-4xl sm:text-5xl font-bold text-blue-950 mb-2">
                 {stat.number}
               </div>
-              <p className="text-gray-600 font-medium text-sm sm:text-base">{stat.label}</p>
+              <p className="text-gray-600 font-medium text-sm sm:text-base">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -157,7 +163,8 @@ const AboutPage = () => {
               Meet Our Team
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              A team of developers, designers, and thinkers bringing your vision to life.
+              A team of developers, designers, and thinkers bringing your vision
+              to life.
             </p>
           </motion.div>
 
@@ -172,21 +179,29 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -8 }}
               >
-<div className="relative overflow-hidden bg-gray-700 h-48 sm:h-56 lg:h-64 rounded-lg">
-  <Image
-    src={member.avatar}
-    alt={member.name}
-    fill
-    className="object-contain object-center"
-  />
-  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-</div>
+                <div className="relative overflow-hidden bg-gray-700 h-48 sm:h-56 lg:h-64 rounded-lg">
+                  <Image
+                    src={member.avatar}
+                    alt={member.name}
+                    fill
+                    className="object-contain object-center"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
 
                 <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">{member.name}</h3>
-                  <p className="text-blue-300 font-medium mb-2">{member.role}</p>
-                  <p className="italic text-xs sm:text-sm text-gray-400 mb-3">“{member.tagline}”</p>
-                  <p className="text-gray-300 text-sm sm:text-base mb-6">{member.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-blue-300 font-medium mb-2">
+                    {member.role}
+                  </p>
+                  <p className="italic text-xs sm:text-sm text-gray-400 mb-3">
+                    “{member.tagline}”
+                  </p>
+                  <p className="text-gray-300 text-sm sm:text-base mb-6">
+                    {member.description}
+                  </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {member.skills.slice(0, 3).map((skill) => (
@@ -233,13 +248,13 @@ const AboutPage = () => {
           whileTap={{ scale: 0.95 }}
         >
           <a href="/contact">
-          <span>Start Your Project</span>
+            <span>Start Your Project</span>
           </a>
           <ArrowRight className="w-5 h-5" />
         </motion.button>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
