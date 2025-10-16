@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Award, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 import values from '@/data/about/values'
 import teamMembers from '@/data/about/teamMembers'
 import stats from '@/data/about/stats'
@@ -170,16 +171,15 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -8 }}
               >
-                <div className="relative overflow-hidden bg-gradient-to-br from-gray-600 to-gray-400 h-56 sm:h-72 flex items-center justify-center">
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-3xl sm:text-4xl font-bold text-white">
-                      {member.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')}
-                    </span>
-                  </div>
-                </div>
+<div className="relative overflow-hidden bg-gray-700 h-48 sm:h-56 lg:h-64 rounded-lg">
+  <Image
+    src={member.avatar}
+    alt={member.name}
+    fill
+    className="object-contain object-center"
+  />
+  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+</div>
 
                 <div className="p-6 sm:p-8">
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">{member.name}</h3>

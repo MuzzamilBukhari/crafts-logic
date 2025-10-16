@@ -7,7 +7,7 @@ import graphicsProjects from '@/data/graphics/graphicsProjects';
 
 const GraphicsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <section className="py-20 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -24,16 +24,16 @@ const GraphicsSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-3 rounded-2xl">
-              <Palette className="w-6 h-6 text-white" />
+            <div className="bg-blue-950 p-3 rounded-2xl">
+              <Palette className="w-6 h-6 text-gray-100" />
             </div>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Graphics <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-950 mb-4">
+            Graphics <span className="bg-blue-950 bg-clip-text text-transparent">Projects</span>
           </h2>
           
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Explore our collection of creative graphic design work, from stunning logos to intricate vector art. 
             Each gallery showcases our attention to detail and commitment to visual excellence.
           </p>
@@ -50,7 +50,7 @@ const GraphicsSection = () => {
               index={index}
               gradientFrom={project.gradientFrom}
               gradientTo={project.gradientTo}
-            />
+            /> 
           ))}
         </div>
 

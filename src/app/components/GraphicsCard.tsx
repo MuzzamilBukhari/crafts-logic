@@ -75,7 +75,7 @@ const GraphicsCard = ({
         {/* Card Content */}
         <div className="p-6">
           <div className="mb-4">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+            <h3 className="text-2xl font-bold text-white mb-3">
               {title}
             </h3>
             
@@ -84,7 +84,7 @@ const GraphicsCard = ({
               {tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1.5 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 text-purple-700 dark:text-purple-300 text-xs font-medium rounded-full border border-purple-200 dark:border-purple-700"
+                  className="px-3 py-1.5 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-green-900/30 dark:to-green-900/30 text-green-700 dark:text-green-300 text-xs font-medium rounded-full border border-green-200 dark:border-green-700"
                 >
                   {tag}
                 </span>
@@ -103,7 +103,7 @@ const GraphicsCard = ({
           {/* View Gallery Button */}
           <motion.button
             onClick={() => setIsModalOpen(true)}
-            className={`w-full bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2`}
+            className={`w-full bg-gray-600 text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

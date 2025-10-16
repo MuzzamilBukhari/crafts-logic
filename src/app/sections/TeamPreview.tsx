@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import teamMembers from "@/data/about/teamMembers"
 
@@ -40,20 +41,15 @@ const TeamPreview = () => {
               whileHover={{ y: -8 }}
             >
               {/* Avatar Section */}
-              <div className="relative overflow-hidden bg-gray-700 h-48 sm:h-56 lg:h-64">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <span className="text-3xl sm:text-4xl font-bold text-white">
-                      {member.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </span>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-
+<div className="relative overflow-hidden bg-gray-700 h-48 sm:h-56 lg:h-64 rounded-lg">
+  <Image
+    src={member.avatar}
+    alt={member.name}
+    fill
+    className="object-contain object-center"
+  />
+  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+</div>
               {/* Content Section */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-blue-950 dark:text-white mb-1">{member.name}</h3>
