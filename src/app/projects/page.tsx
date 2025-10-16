@@ -5,13 +5,13 @@ import { useState } from 'react';
 import { 
   ExternalLink, 
   Github, 
-  Eye, 
   Calendar,
   X,
   ArrowRight
 } from 'lucide-react';
 import projects from '@/data/projects/projects'
 import categories from '@/data/projects/categories';
+import ProjectCard from '@/app/components/ProjectCard';
 
 const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -25,7 +25,8 @@ const ProjectsPage = () => {
     pink: 'bg-pink-100 dark:bg-pink-900/30 text-pink-600',
     green: 'bg-green-100 dark:bg-green-900/30 text-green-600',
     teal: 'bg-teal-100 dark:bg-teal-900/30 text-teal-600',
-    indigo: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600'
+    indigo: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600',
+    orange: 'bg-orange-100 dark:bg-orange-900/30 text-orange-600'
   };
 
   return (
@@ -92,97 +93,13 @@ const ProjectsPage = () => {
           >
             <AnimatePresence>
               {filteredProjects.map((project, index) => (
-                <motion.div
+                <ProjectCard
                   key={project.id}
-                  className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -10 }}
-                  layout
-                >
-                  {/* Project Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-gray-400 to-gray-500 overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl font-bold text-white/20">
-                        {project.id}
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                      <motion.button
-                        onClick={() => setSelectedProject(project.id)}
-                        className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                      >
-                        <Eye className="w-5 h-5" />
-                      </motion.button>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-                      >
-                        <Github className="w-5 h-5" />
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Project Info */}
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${colorClasses[project.color as keyof typeof colorClasses]}`}>
-                        {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
-                      </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">{project.date}</span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                      {project.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">
-                      {project.shortDescription}
-                    </p>
-
-                    {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.slice(0, 3).map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded">
-                          +{project.technologies.length - 3} more
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Action Button */}
-                    <motion.button
-                      onClick={() => setSelectedProject(project.id)}
-                      className="w-full bg-gradient-to-r from-gray-600 to-gray-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <span>View Case Study</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-                  </div>
-                </motion.div>
+                  project={project}
+                  index={index}
+                  onViewDetails={setSelectedProject}
+                  colorClasses={colorClasses}
+                />
               ))}
             </AnimatePresence>
           </motion.div>
@@ -287,24 +204,28 @@ const ProjectsPage = () => {
 
                         {/* Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                          <a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 bg-gradient-to-r from-blue-950 to-blue-900 text-white py-4 rounded-xl font-semibold text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                          >
-                            <ExternalLink className="w-5 h-5" />
-                            <span>View Live Site</span>
-                          </a>
-                          <a
-                            href={project.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-semibold text-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 flex items-center justify-center space-x-2"
-                          >
-                            <Github className="w-5 h-5" />
-                            <span>View Code</span>
-                          </a>
+                          {project.liveUrl && (
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1 bg-gradient-to-r from-blue-950 to-blue-900 text-white py-4 rounded-xl font-semibold text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                            >
+                              <ExternalLink className="w-5 h-5" />
+                              <span>View Live Site</span>
+                            </a>
+                          )}
+                          {project.githubUrl && (
+                            <a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-semibold text-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 flex items-center justify-center space-x-2"
+                            >
+                              <Github className="w-5 h-5" />
+                              <span>View Code</span>
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>

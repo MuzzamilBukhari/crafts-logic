@@ -43,7 +43,7 @@ const Footer = () => {
   const socialLinks = [
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/109463410/' },
     { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/share/1KFhn4rmvP/' },
-    { name: 'Email', icon: Mail, href: 'mailto:contact.craftslogic@gmail.com' }
+    { name: 'Email', icon: Mail, href: 'mailto:support@craftslogic.com' }
 
   ];
 

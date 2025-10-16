@@ -1,6 +1,9 @@
-const projects = [
+import { Project } from '@/types/project';
+
+const projects: Project[] = [
     {
       id: 1,
+      type: 'development',
       title: 'E-commerce AI Platform',
       category: 'fullstack',
       description: 'AI-powered e-commerce platform with intelligent product recommendations and automated customer service.',
@@ -24,6 +27,7 @@ const projects = [
     },
     {
       id: 2,
+      type: 'development',
       title: 'Healthcare Management System',
       category: 'fullstack',
       description: 'Comprehensive healthcare management system with patient portal, appointment scheduling, and telemedicine features.',
@@ -47,6 +51,7 @@ const projects = [
     },
     {
       id: 3,
+      type: 'development',
       title: 'Luxury Fashion Store',
       category: 'shopify',
       description: 'Premium Shopify store for luxury fashion brand with custom checkout flow and VIP customer features.',
@@ -70,6 +75,7 @@ const projects = [
     },
     {
       id: 4,
+      type: 'development',
       title: 'Creative Agency Website',
       category: 'wordpress',
       description: 'Dynamic WordPress website for creative agency with portfolio showcase and client management system.',
@@ -93,6 +99,7 @@ const projects = [
     },
     {
       id: 5,
+      type: 'development',
       title: 'FinTech Mobile App Design',
       category: 'design',
       description: 'Complete UI/UX design for innovative FinTech mobile application with focus on user experience and security.',
@@ -116,6 +123,7 @@ const projects = [
     },
     {
       id: 6,
+      type: 'development',
       title: 'AI Content Generator',
       category: 'ai',
       description: 'Advanced AI-powered content generation platform with multiple content types and customization options.',
@@ -138,27 +146,30 @@ const projects = [
       color: 'indigo'
     },
     {
-  id: 7,
-  title: 'Creative Graphic Design Showcase',
-  category: 'graphicdesign',
-  description: 'A collection of professional graphic design projects including logo design, posters, social media creatives, and brand identity designs.',
-  shortDescription: 'Showcase of creative graphic design projects',
-  image: '/images/graphics/main-preview.jpg',
-  date: '2025',
-  technologies: ['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva'],
-  features: [
-    'Logo design and branding',
-    'Poster and flyer creation',
-    'Social media design templates',
-    'Business card and stationery design',
-    'Creative typography and layouts',
-    'High-quality print-ready files'
-  ],
-  client: 'Various Clients',
-  duration: 'Ongoing',
-  color: 'orange'
-}
-
+      id: 7,
+      type: 'graphics',
+      title: 'Creative Graphic Design Showcase',
+      category: 'graphicdesign',
+      description: 'A collection of professional graphic design projects including logo design, posters, social media creatives, and brand identity designs.',
+      shortDescription: 'Showcase of creative graphic design projects',
+      image: '/images/graphics/main-preview.jpg',
+      thumbnailUrl: '/images/graphics/main-preview.jpg',
+      date: '2025',
+      technologies: ['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva'],
+      features: [
+        'Logo design and branding',
+        'Poster and flyer creation',
+        'Social media design templates',
+        'Business card and stationery design',
+        'Creative typography and layouts',
+        'High-quality print-ready files'
+      ],
+      client: 'Various Clients',
+      duration: 'Ongoing',
+      color: 'orange',
+      platform: 'Instagram',
+      platformUrl: 'https://instagram.com/craftslogic'
+    }
   ];
 
 export default projects
